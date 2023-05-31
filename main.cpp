@@ -8,6 +8,19 @@ using namespace tinyxml2;
 using doc = XMLDocument;
 using elem = XMLElement;
 
+struct Circle
+{
+	float xpos;
+	float ypos;
+	float zpos;
+	
+	float radius;
+	std::string color;
+	
+public:
+	Circle(float xpos, float ypos, float zpos, float radius, std::string color) : xpos(xpos), ypos(ypos), zpos(zpos), radius(radius), color(color) { }
+};
+
 //sas
 int main(int argc, char **argv)
 {
@@ -40,7 +53,8 @@ int main(int argc, char **argv)
 	
 	if (!strcmp(argv[1], "1"))
 	{
-		std::cout<<"creo una SFERA alle coordinate "<<ARG<<" "<<ARG<<" "<<ARG<<" di raggio "<<ARG<<" di colore "<<ARG<<".\n";
+		Circle circle = Circle(atoi(ARG), atoi(ARG), atoi(ARG), atoi(ARG), ARG);
+		std::cout<<"creo una SFERA alle coordinate "<<circle.xpos<<" "<<circle.ypos<<" "<<circle.zpos<<" di raggio "<<circle.radius<<" di colore "<<circle.color<<".\n";
 	}
 	else
 	{
