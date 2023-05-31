@@ -8,13 +8,9 @@ int main(int argc, char **argv)
 	
 	if (!strcmp(argv[1], "1"))
 	{
-		std::cout<<"cerchio o sfera\n";
+		std::cout<<"sfera\n";
 	}
-	else if (argc - 1 <  4)
-	{
-		std::cout<<"figura 2D\n";
-	}
-	else if (argc - 1 > 4)
+	else
 	{
 		std::cout<<"figura 3D\n";
 	}

@@ -1,2 +1,1 @@
-g++ -std=c++11 File/file.cpp -c
-g++ -std=c++11 main.cpp file.o -o out
+./builds/out $1 $2 $3 $4 $5 $6 $7
