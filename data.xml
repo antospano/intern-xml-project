@@ -9,7 +9,34 @@
 	</shape>
 	
 	<shape id="2">
-		<xpos>5</xpos>
+		<xpos>50</xpos>
+		<ypos>4</ypos>
+		<zpos>3</zpos>
+		
+		<radius>2</radius>
+		<color>cyan</color>
+	</shape>
+	
+	<shape id="3">
+		<xpos>51</xpos>
+		<ypos>4</ypos>
+		<zpos>3</zpos>
+		
+		<radius>2</radius>
+		<color>cyan</color>
+	</shape>
+	
+	<shape id="4">
+		<xpos>52</xpos>
+		<ypos>4</ypos>
+		<zpos>3</zpos>
+		
+		<radius>2</radius>
+		<color>cyan</color>
+	</shape>
+	
+	<shape id="5">
+		<xpos>53</xpos>
 		<ypos>4</ypos>
 		<zpos>3</zpos>
 		

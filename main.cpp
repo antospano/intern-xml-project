@@ -5,6 +5,7 @@
 #define ARG argv[i++]
 
 using namespace tinyxml2;
+using doc = XMLDocument;
 using elem = XMLElement;
 
 //sas
@@ -14,26 +15,28 @@ int main(int argc, char **argv)
 	std::cout<<"il numero di argomenti è "<<argc<<"\n";
 	
 	int i = 2;
-	//std::cout<<"prima if"<<(doc.LoadFile("data.xml") == XML_SUCCESS)<<"\n";
 	
-    tinyxml2::XMLDocument doc;
-    if (doc.LoadFile("data.xml") == tinyxml2::XML_SUCCESS) {
-        const tinyxml2::XMLElement* shapesElement = doc.FirstChildElement("shapes");
-        if (shapesElement) {
-            const tinyxml2::XMLElement* shapeElement = shapesElement->FirstChildElement("shape");
-            if (shapeElement) {
-                const tinyxml2::XMLElement* xposElement = shapeElement->FirstChildElement("xpos");
-                if (xposElement) {
-                    const char* value = xposElement->GetText();
-                    if (value) {
-                        std::cout << "xpos: " << value << std::endl;
-                    }
-                }
-            }
-        }
-    } else {
-        std::cout << "Failed to load XML file." << std::endl;
-    }
+    doc doc;
+	doc.LoadFile("data.xml");
+	elem* root = doc.FirstChildElement("shapes");
+	elem* shape = root->FirstChildElement("shape");
+	elem* secondShape;
+	elem* tempShape = shape;
+	
+	do
+	{
+		secondShape = tempShape->NextSiblingElement("shape");
+		tempShape = secondShape;
+		
+		if (secondShape)
+		{
+			elem* xpos = secondShape->FirstChildElement("xpos");
+			const char* _xpos = xpos->GetText();
+			std::cout<<_xpos<<"\n";
+		}
+		
+	} while (secondShape);
+	
 	
 	if (!strcmp(argv[1], "1"))
 	{
