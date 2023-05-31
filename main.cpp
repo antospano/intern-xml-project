@@ -8,7 +8,7 @@ using namespace tinyxml2;
 using doc = XMLDocument;
 using elem = XMLElement;
 
-struct Circle
+struct Sphere
 {
 	float xpos;
 	float ypos;
@@ -18,7 +18,37 @@ struct Circle
 	std::string color;
 	
 public:
-	Circle(float xpos, float ypos, float zpos, float radius, std::string color) : xpos(xpos), ypos(ypos), zpos(zpos), radius(radius), color(color) { }
+	Sphere(float xpos, float ypos, float zpos, float radius, std::string color) : xpos(xpos), ypos(ypos), zpos(zpos), radius(radius), color(color) { }
+};
+
+struct Block
+{
+	float xpos;
+	float ypos;
+	float zpos;
+	
+	float xdim;
+	float ydim;
+	float zdim;
+	
+	std::string color;
+	
+public:
+	Block(float xpos, float ypos, float zpos, float xdim, float ydim, float zdim, std::string color) : xpos(xpos), ypos(ypos), zpos(zpos), xdim(xdim), ydim(ydim), zdim(zdim), color(color) { }
+};
+
+struct Cylinder
+{
+	float xpos;
+	float ypos;
+	float zpos;
+	
+	float radius;
+	float ydim;
+	std::string color;
+	
+public:
+	Cylinder(float xpos, float ypos, float zpos, float radius, float ydim, std::string color) : xpos(xpos), ypos(ypos), zpos(zpos), radius(radius), ydim(ydim), color(color) { }
 };
 
 //sas
@@ -53,8 +83,8 @@ int main(int argc, char **argv)
 	
 	if (!strcmp(argv[1], "1"))
 	{
-		Circle circle = Circle(atoi(ARG), atoi(ARG), atoi(ARG), atoi(ARG), ARG);
-		std::cout<<"creo una SFERA alle coordinate "<<circle.xpos<<" "<<circle.ypos<<" "<<circle.zpos<<" di raggio "<<circle.radius<<" di colore "<<circle.color<<".\n";
+		Sphere sphere = Sphere(atoi(ARG), atoi(ARG), atoi(ARG), atoi(ARG), ARG);
+		std::cout<<"creo una SFERA alle coordinate "<<sphere.xpos<<" "<<sphere.ypos<<" "<<sphere.zpos<<" di raggio "<<sphere.radius<<" di colore "<<sphere.color<<".\n";
 	}
 	else
 	{
