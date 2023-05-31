@@ -1,0 +1,19 @@
+<shapes>
+	<shape id="1">
+		<xpos>5</xpos>
+		<ypos>4</ypos>
+		<zpos>3</zpos>
+		
+		<radius>2</radius>
+		<color>cyan</color>
+	</shape>
+	
+	<shape id="2">
+		<xpos>5</xpos>
+		<ypos>4</ypos>
+		<zpos>3</zpos>
+		
+		<radius>2</radius>
+		<color>cyan</color>
+	</shape>
+</shapes>
