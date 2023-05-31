@@ -11,4 +11,4 @@ build:
 	@mv out builds
 
 run:
-	@./run.sh $(FIGURA) $(XPOS) $(YPOS) $(ZPOS) $(XDIM) $(YDIM) $(ZDIM) $(RADIUS)
+	@./builds/out $(FIGURA) $(XPOS) $(YPOS) $(ZPOS) $(XDIM) $(YDIM) $(ZDIM) $(RADIUS)
