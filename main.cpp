@@ -12,7 +12,7 @@ int main(int argc, char **argv)
 	
 	if (!strcmp(argv[1], "1"))
 	{
-		std::cout<<"creo una sfera alle coordinate "<<ARG<<" "<<ARG<<" "<<ARG<<" di raggio "<<ARG<<" di colore "<<ARG<<".\n";
+		std::cout<<"creo una SFERA alle coordinate "<<ARG<<" "<<ARG<<" "<<ARG<<" di raggio "<<ARG<<" di colore "<<ARG<<".\n";
 	}
 	else
 	{
