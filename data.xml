@@ -1,46 +1,26 @@
 <shapes>
-	<shape id="1">
-		<xpos>5</xpos>
-		<ypos>4</ypos>
-		<zpos>3</zpos>
-		
-		<radius>2</radius>
-		<color>cyan</color>
-	</shape>
-	
-	<shape id="2">
-		<xpos>50</xpos>
-		<ypos>4</ypos>
-		<zpos>3</zpos>
-		
-		<radius>2</radius>
-		<color>cyan</color>
-	</shape>
-	
-	<shape id="3">
-		<xpos>51</xpos>
-		<ypos>4</ypos>
-		<zpos>3</zpos>
-		
-		<radius>2</radius>
-		<color>cyan</color>
-	</shape>
-	
-	<shape id="4">
-		<xpos>52</xpos>
-		<ypos>4</ypos>
-		<zpos>3</zpos>
-		
-		<radius>2</radius>
-		<color>cyan</color>
-	</shape>
-	
-	<shape id="5">
-		<xpos>53</xpos>
-		<ypos>4</ypos>
-		<zpos>3</zpos>
-		
-		<radius>2</radius>
-		<color>cyan</color>
-	</shape>
+    <shape id="1">
+        <xpos>2.000000</xpos>
+        <ypos>3.000000</ypos>
+        <zpos>4.000000</zpos>
+        <radius>5.000000</radius>
+        <color>cyan</color>
+    </shape>
+    <shape id="2">
+        <xpos>2.000000</xpos>
+        <ypos>3.000000</ypos>
+        <zpos>4.000000</zpos>
+        <xdim>5.000000</xdim>
+        <ydim>6.000000</ydim>
+        <zdim>7.000000</zdim>
+        <color>red</color>
+    </shape>
+    <shape id="3">
+        <xpos>2.000000</xpos>
+        <ypos>3.000000</ypos>
+        <zpos>4.000000</zpos>
+        <radius>5.000000</radius>
+        <ydim>6.000000</ydim>
+        <color>green</color>
+    </shape>
 </shapes>

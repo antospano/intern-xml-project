@@ -2,30 +2,26 @@
 
 XMLShapeHandler::XMLShapeHandler(const char *path)
 {
-	doc.LoadFile(path);
+	this->path = path;
+	std::cout<<(doc.LoadFile(path) == XML_SUCCESS ? "XML LOADED\n" : "XML FAILED TO LOAD\n");
+	root = doc.FirstChildElement("shapes");
 }
 
 void XMLShapeHandler::AddShape(Shape polygon)
 {
+	elem* shape = doc.NewElement("shape");
+	shape->SetAttribute("id", polygon.id.c_str());
+	root->InsertEndChild(shape);
 	
-	if (polygon.type == ShapeType::sphere) {
-		std::cout<<"SI LO è \n";
-    }
+	for (auto item : polygon.elements)
+	{
+		elem* elem = doc.NewElement(item.name.c_str());
+		elem->SetText(item.value.c_str());
+		shape->InsertEndChild(elem);
+	}
 }
 
-void XMLShapeHandler::AddShape(const char *elem, const char *parent)
+XMLShapeHandler::~XMLShapeHandler()
 {
-	
-}
-	
-template <typename T>
-void XMLShapeHandler::AddShape(const char *attribName, T attribValue, const char *elem)
-{
-	
-}
-
-template <typename T>
-void XMLShapeHandler::AddShape(const char *attribName, T attribValue, const char *elem, const char *parent)
-{
-	
+	std::cout<<(doc.SaveFile(path) == XML_SUCCESS ? "XML SAVED\n" : "XML FAILED TO SAVE\n");
 }

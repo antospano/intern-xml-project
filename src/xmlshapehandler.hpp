@@ -11,6 +11,7 @@ using elem = XMLElement;
 class XMLShapeHandler
 {
 private:
+	const char* path;
 	doc doc;
 	elem* root;
 	
@@ -18,10 +19,6 @@ public:
 	XMLShapeHandler(const char *path);
 	
 	void AddShape(Shape polygon);
-	void AddShape(const char *elem, const char *parent);
 	
-	template <typename T>
-	void AddShape(const char *attribName, T attribValue, const char *elem);
-	template <typename T>
-	void AddShape(const char *attribName, T attribValue, const char *elem, const char *parent);
+	~XMLShapeHandler();
 };
