@@ -1,12 +1,9 @@
-#include <iostream>
+#include "xmlshapehandler.hpp"
 #include "file.hpp"
-#include "XML/tinyxml2.h"
 
 #define ARG argv[i++]
 
-using namespace tinyxml2;
-using doc = XMLDocument;
-using elem = XMLElement;
+
 
 //sas
 int main(int argc, char **argv)
@@ -14,8 +11,13 @@ int main(int argc, char **argv)
 
 	std::cout<<"il numero di argomenti è "<<argc<<"\n";
 	
-	int i = 2;
+	XMLShapeHandler coc("data.xml");
+	Sphere sphere(Vector3(2, 2, 2), 5, "cyan");
+	Block block(Vector3(2, 2, 2), Vector3(3, 3, 3), "red");
+	coc.AddShape(sphere);
 	
+	int i = 2;
+	/*
     doc doc;
 	doc.LoadFile("data.xml");
 	elem* root = doc.FirstChildElement("shapes");
@@ -35,7 +37,7 @@ int main(int argc, char **argv)
 			std::cout<<_xpos<<"\n";
 		}
 		
-	} while (secondShape);
+	} while (secondShape); */
 	
 	
 	if (!strcmp(argv[1], "1"))
