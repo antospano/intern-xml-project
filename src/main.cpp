@@ -1,5 +1,5 @@
 #include <iostream>
-#include "File/file.hpp"
+#include "file.hpp"
 #include "XML/tinyxml2.h"
 
 #define ARG argv[i++]
